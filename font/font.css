@@ -1,0 +1,10 @@
+@font-face {
+    font-family: YEKAN;
+    font-style: normal;
+    font-weight: 500;
+    src: url('./iran-yekan-fa/medium/medium.eot');
+    src: url('./iran-yekan-fa/medium/medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+    url('./iran-yekan-fa/medium/medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+    url('./iran-yekan-fa/medium/medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('./iran-yekan-fa/medium/medium.ttf') format('truetype');
+  }

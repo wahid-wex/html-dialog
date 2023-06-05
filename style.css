@@ -1,0 +1,136 @@
+
+/* GENERAL START */
+:root {
+    --primary-color: #2424ff;
+    --radius: 8px;
+    
+}
+
+* {
+    box-sizing: border-box;
+    font-family: YEKAN;
+    color: #262626;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* GENETRAL END */
+
+
+
+
+header.main-header {
+    margin-top: 200px;
+    padding: 16px;
+    text-align: center;
+}
+
+button.amazing-button {
+    padding: 4px 15px;
+    color: var(--primary-color);
+    border: 1px solid currentColor;
+    background-color: white;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+/* INSIDE DIALOG  START*/
+
+.amazing-dialog {
+    width: 300px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 16px;
+    border-radius: var(--radius);
+    border: none;
+    animation: dialogAnimation .4s;
+}
+
+.amazing-dialog::backdrop {
+    backdrop-filter: blur(2px);
+    
+}
+
+.amazing-dialog .header {
+    text-align: right;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+
+.amazing-dialog .input-wrapper{
+    position: relative;
+    margin: 40px 0;
+}
+
+/* --- INPUT START --- */
+
+.amazing-dialog .input-wrapper input {
+    border: 2px solid gray;
+    border-radius: var(--radius);
+    margin: 15px 0;
+    padding: 5px;
+    outline: none;
+    width: 100%;
+    direction: rtl;
+}
+
+.amazing-dialog .input-wrapper label {
+    position: absolute;
+    font-size: .9rem;
+    top: 1px;
+    right: 5px;
+    padding: 0 8px ;
+    background-color: white;
+    transition: .2s ease-in-out all;
+}
+
+.amazing-dialog input:focus {
+    border-color: var(--primary-color);
+}
+
+.amazing-dialog input:not(:placeholder-shown) + label {
+    top: -14px;
+    right: 16px;
+    color: var(--primary-color);
+    font-size: .8rem;
+}
+
+
+.amazing-dialog input:focus + label {
+    top: -14px;
+    right: 16px;
+    color: var(--primary-color);
+    font-size: .8rem;
+}
+
+/* --- INPUT END --- */
+
+.amazing-dialog .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.amazing-dialog .buttons button.cancel {
+    color: red;
+}
+
+
+
+@keyframes dialogAnimation{
+    0%{
+        opacity: 0;
+        top: 50px;
+    }
+
+    100%{
+        opacity: 1;
+        top: 0;
+    }
+}
